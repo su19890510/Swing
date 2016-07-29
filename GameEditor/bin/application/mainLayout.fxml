@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainLayoutController">
+   <left>
+      <TreeView id="treeView" fx:id="fileList" prefHeight="200.0" prefWidth="250.0" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <Pane fx:id="centerPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane id="tool" alignment="CENTER_RIGHT" layoutX="27.0" layoutY="14.0" prefHeight="30.0" prefWidth="76.0" style="-fx-background-color: ;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Pane id="bg" fx:id="zoomInBg" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView id="suoxiao" fitHeight="16.0" fitWidth="16.0" nodeOrientation="INHERIT" onMouseClicked="#zoomInClicked" pickOnBounds="true" preserveRatio="true" x="10.0" y="8.0">
+                           <image>
+                              <Image url="@../res/suoxiao.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane id="bg" fx:id="zoomOutBg" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <ImageView id="fangda" fitHeight="16.0" fitWidth="16.0" onMouseClicked="#zoomOutClicked" pickOnBounds="true" preserveRatio="true" x="10.0" y="8.0">
+                           <image>
+                              <Image url="@../res/fangda.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </GridPane>
+         </children></Pane>
+   </center>
+   <top>
+      <GridPane id="topPane" fx:id="topPane" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         
+        </rowConstraints>
+         <children>
+            <MenuBar id="menubar" style="-fx-background-color: #171717;">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem id="openFile" mnemonicParsing="false" onAction="#openFileClicked" text="打开" />
+                        <MenuItem id="saveFile" mnemonicParsing="false" text="保存" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="关于" />
+                        <MenuItem mnemonicParsing="false" text="帮助" />
+                  </items>
+                </Menu>
+              </menus>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </MenuBar>
+         </children>
+      </GridPane>
+   </top>
+</BorderPane>

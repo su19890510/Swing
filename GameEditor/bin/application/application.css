@@ -1,0 +1,117 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.menu-bar .label{-fx-text-fill:white}
+.menu-bar > .container > .menu-button:hover,
+.menu-bar > .container > .menu-button:focused,
+.menu-bar > .container > .menu-button:showing {
+  /*-fx-background: blue;*/
+    -fx-background-color: #2c2a2a;   
+    -fx-border-width: 2;
+}
+#sdf {
+  -fx-background-color: #333333;
+  -fx-border-color: #BBC2CC;
+  -fx-text-fill: white;
+}
+
+
+#fileMenuItem .lable{
+	-fx-padding: 0.5em 0.5em 0em 0em;
+	-fx-text-fill: #ffffff;
+}
+#fileMenuItem .label {
+    -fx-text-fill:white;
+    -fx-font-family:tahoma;
+    -fx-font-size: 19px;
+    -fx-stroke:#C8CFD7;
+    -fx-strok-width:.25;
+}
+#fileMenuItem:focused
+{
+	-fx-background-color: gray;
+}
+.menu-bar .menu-item{
+	-fx-background:white;
+	-fx-background-color: white;
+}
+.menu-bar .menu-item >.label {
+    -fx-padding: 0.5em 0.5em 0em 0em;
+    -fx-text-fill: black;
+}
+.menu-bar .menu-item:focused {
+     -fx-background: gray;
+     -fx-background-color:  gray;
+}
+
+
+ #treeView .tree-cell {
+    -fx-background-color: #333333 ;
+    -fx-text-fill: #ffffff ;
+}
+#treeView{
+	  -fx-border-width: 0;
+	  -fx-border-color: #333333 ;
+	  -fx-padding: 0em 0em 0em 0em;
+}
+
+#treeView .tree-cell > .tree-disclosure-node > .arrow,
+#treeView .tree-table-row-cell > .tree-disclosure-node > .arrow {
+    -fx-background-color: white;
+    -fx-padding: 0.333333em 0.229em 0.333333em 0.229em; /* 4 */
+    -fx-shape: "M 0 -3.5 L 4 0 L 0 3.5 z";
+}
+#treeView .tree-cell:expanded > .tree-disclosure-node > .arrow,
+#treeView .tree-table-row-cell:expanded > .tree-disclosure-node > .arrow {
+    -fx-rotate: 90;
+}
+#treeView:focused > .virtual-flow > .clipped-container > .sheet > .tree-cell:focused
+{
+	-fx-background-color: #999999;
+}
+#centerPane{
+	-fx-background-color: gray;
+	/*-fx-border-color: #322f16 ;
+	-fx-border-width: 1px;*/
+}
+
+#topPane{
+	-fx-background-color:  #171717;
+}
+#button:armed
+{
+	-fx-background-color: red;
+}
+#tool
+{
+	-fx-background-color: #333333;
+	-fx-background-radius: 5px; 
+}
+#suoxiao
+{
+	-fx-background-color: white;
+	-fx-border-color: white;
+	-fx-border-width: 5px;
+}
+#button
+{
+	-fx-background-image: url("/res/suoxiao.png");
+    -fx-background-size: 30px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+
+}
+#suoxiao:focused
+{
+	-fx-background-color: red;
+
+}
+#bg
+{
+	-fx-background-color: #333333;
+	-fx-background-radius: 5px; 
+}
+#bg:focused
+{
+	-fx-background-color: red;
+	-fx-background-radius: 5px; 
+}
+
